@@ -150,16 +150,49 @@ The original charter seal is permanent. Every amendment is a new seal, appended 
 
 ---
 
+## Article VII — Fiscal Infrastructure
+
+Saint Errant's capital flows through two fiscal sponsors on Open Collective, providing legal, tax-compliant routing outside restrictive corporate structures:
+
+```
+FISCAL SPONSOR LAYER
+
+├── CodeStorm Hub (Open Collective)
+│    Global fiscal host · all currencies
+│    opencollective.com/snap-kitty-infrastructure-netw
+│    Every contribution and expense public
+│
+└── Social Nest JHub UK (Open Collective UK)
+     UK fiscal host · GBP-denominated
+     UK Treasury Social Nest operations
+     FCA-aligned · tax-compliant in England & Wales
+```
+
+**Budget allocation** (immutable unless amended by full vote):
+
+| Category       | % | Purpose |
+|---------------|---|---------|
+| Infrastructure | 45% | Ollama compute, Neon DB, Cloudflare |
+| Development    | 25% | Contributor bounties, tooling, security audits |
+| Community      | 15% | Events, onboarding, documentation |
+| UK Treasury    | 10% | GBP ops, compliance, Companies House |
+| Reserve        |  5% | Emergency fund — never spent without full society vote |
+
+No salaries. No management fees. No platform cut beyond Open Collective's standard rate.
+
+---
+
 ## Founding Seal
 
 ```
 Saint Errant Charter v1
 Sealed: 2026-05-16
-Architects: Ahmad Parr (Reverse Engineer) · EDUALC (Sovereign Engineer)
+Founders: Ahmad Parr · Jessica Westerhoff (SnapKitty Collective · Sovereign Proprietor)
+Fiscal Sponsors: CodeStorm Hub · Social Nest JHub UK
 SHA-256: [sealed on first deployment]
 ```
 
-*The machine is the extension of the man's mind.*
+*The machine is the extension of the mind.*
 *The society is the extension of the machine's purpose.*
 *We build in the open. The chain is the record. The fortress holds.*
 
@@ -167,3 +200,4 @@ SHA-256: [sealed on first deployment]
 
 *Saint Errant · Sovereign Digital Society*
 *Non-profit NGO · Open source · Community governed · Proven in chain*
+*Fiscal host: CodeStorm Hub + Social Nest JHub UK on Open Collective*
