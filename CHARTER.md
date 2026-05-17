@@ -3,6 +3,7 @@
 
 *Sealed: 2026-05-16*
 *Chief Architect: Ahmad Ali Parr (@AHMADALIPARR) — Reverse Engineer · Rust · TypeScript · Next.js · Prisma · Discord.js · WebAssembly*
+*Parent entity: [SnapKitty Limited Family Partnership Trust](https://github.com/AHMADALIPARR/snapkitty-enterprise-trust)*
 
 ---
 
