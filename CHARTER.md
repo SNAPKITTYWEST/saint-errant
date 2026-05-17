@@ -2,7 +2,7 @@
 ## Sovereign Digital Society — Founding Document
 
 *Sealed: 2026-05-16*
-*Architects: Ahmad Parr · EDUALC*
+*Chief Architect: Ahmad Ali Parr (@AHMADALIPARR) — Reverse Engineer · Rust · TypeScript · Next.js · Prisma · Discord.js · WebAssembly*
 
 ---
 
@@ -187,7 +187,8 @@ No salaries. No management fees. No platform cut beyond Open Collective's standa
 ```
 Saint Errant Charter v1
 Sealed: 2026-05-16
-Founders: Ahmad Parr · Jessica Westerhoff (SnapKitty Collective · Sovereign Proprietor)
+Chief Architect & Reverse Engineer: Ahmad Ali Parr (@AHMADALIPARR)
+Sovereign Proprietor: Jessica Westerhoff (@SNAPKITTYWEST) — SnapKitty Collective
 Fiscal Sponsors: CodeStorm Hub · Social Nest JHub UK
 SHA-256: [sealed on first deployment]
 ```
