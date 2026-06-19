@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saint Errant — Sovereign AI Governance Authority</title>
+<meta name="description" content="Saint Errant is the Digital Institution for Sovereign AI Governance. We define, audit, and certify autonomous AI systems that govern themselves through immutable structural law.">
+<meta property="og:title" content="Saint Errant — Sovereign AI Governance Authority">
+<meta property="og:description" content="We certify sovereignty. A Saint Errant Certified system can prove — mathematically, cryptographically — that it governs itself.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F8F8F6;
+  --white: #FFFFFF;
+  --navy: #0B1724;
+  --navy-2: #152035;
+  --navy-3: #1E3050;
+  --steel: #2D3F55;
+  --mid: #4A5E74;
+  --dim: #6B7F95;
+  --faint: #94A3B8;
+  --border: #DDE3EB;
+  --border-2: #E8EDF3;
+  --gold: #9A7D4E;
+  --gold-2: #C4A76B;
+  --gold-bg: #F5EDD8;
+  --blue: #1B4FBF;
+  --blue-2: #2563EB;
+  --blue-bg: #EFF4FF;
+  --green: #0F6B4A;
+  --green-bg: #ECFDF5;
+  --text: #0B1724;
+  --radius: 2px;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.nav-logo span {
+  color: var(--gold);
+  margin-right: 6px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--mid);
+  text-decoration: none;
+  transition: color 0.15s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--navy); }
+
+.nav-cta {
+  background: var(--navy) !important;
+  color: white !important;
+  padding: 8px 18px !important;
+  letter-spacing: 1px !important;
+  transition: background 0.15s !important;
+}
+
+.nav-cta:hover { background: var(--navy-3) !important; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-inner { padding: 0 20px; }
+}
+
+/* ── SECTIONS ── */
+section { padding: 80px 40px; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── HERO ── */
+.hero {
+  padding: 160px 40px 100px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero { padding: 120px 20px 60px; }
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-2);
+  background: var(--gold-bg);
+  padding: 5px 12px;
+  margin-bottom: 24px;
+}
+
+.hero-tag::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--navy);
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+
+h1 em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.hero-lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--steel);
+  margin-bottom: 32px;
+  max-width: 560px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 13px 28px;
+  background: var(--navy);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover { background: var(--navy-3); }
+
+.btn-outline {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid var(--border);
+  color: var(--steel);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: white;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+
+/* HERO CARD */
+.hero-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 32px;
+}
+
+.hero-card-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cert-mark {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-2);
+}
+
+.cert-mark:last-child { border-bottom: none; padding-bottom: 0; }
+
+.cert-icon {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--mono);
+}
+
+.cert-i { background: var(--blue-bg); color: var(--blue); }
+.cert-s { background: var(--gold-bg); color: var(--gold); }
+.cert-ig { background: var(--navy); color: var(--gold-2); }
+
+.cert-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.cert-desc {
+  font-size: 11px;
+  color: var(--dim);
+  line-height: 1.4;
+}
+
+.cert-fee {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--mid);
+  font-family: var(--mono);
+  margin-top: 2px;
+}
+
+/* ── INSTITUTION STRIP ── */
+.strip {
+  background: var(--navy);
+  padding: 20px 40px;
+}
+
+.strip-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.strip-item {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.strip-item span { color: rgba(255,255,255,0.9); display: block; font-size: 14px; font-weight: 700; letter-spacing: 0; margin-top: 2px; }
+
+/* ── ABOUT ── */
+.about {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: clamp(24px, 3.5vw, 38px);
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.lead-text {
+  font-size: 17px;
+  color: var(--steel);
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 16px;
+}
+
+.body-text {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+blockquote {
+  border-left: 3px solid var(--gold);
+  padding: 16px 24px;
+  margin: 32px 0;
+  background: var(--gold-bg);
+  max-width: 640px;
+}
+
+blockquote p {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--steel);
+  line-height: 1.7;
+}
+
+blockquote cite {
+  display: block;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+/* ── CRITERIA ── */
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 48px;
+}
+
+.criterion {
+  background: var(--white);
+  padding: 32px;
+  transition: background 0.15s;
+}
+
+.criterion:hover { background: var(--bg); }
+
+.criterion-num {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.criterion-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.criterion-desc {
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.criterion-test {
+  background: var(--bg);
+  border-left: 2px solid var(--border);
+  padding: 10px 14px;
+  font-size: 11px;
+  color: var(--dim);
+  font-family: var(--mono);
+  line-height: 1.6;
+}
+
+.criterion-test strong { color: var(--navy); }
+
+/* ── CERTIFICATION ── */
+.cert-tiers {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) { .tiers-grid { grid-template-columns: 1fr; } }
+
+.tier-card {
+  border: 1px solid var(--border);
+  background: var(--white);
+  padding: 36px 32px;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.tier-card:hover { border-color: var(--navy); }
+
+.tier-card.featured {
+  border-color: var(--gold);
+  background: var(--navy);
+}
+
+.tier-mark {
+  font-size: 10px;
+  font-weight: 700;
+  font-family: var(--mono);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.tier-card:not(.featured) .tier-mark { color: var(--gold); }
+.tier-card.featured .tier-mark { color: var(--gold-2); }
+
+.tier-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.tier-card.featured .tier-name { color: white; }
+
+.tier-tagline {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--dim);
+  margin-bottom: 24px;
+}
+
+.tier-card.featured .tier-tagline { color: rgba(255,255,255,0.5); }
+
+.tier-price {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  font-family: var(--mono);
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+}
+
+.tier-card.featured .tier-price { color: var(--gold-2); }
+
+.tier-price-sub {
+  font-size: 11px;
+  color: var(--dim);
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+.tier-card.featured .tier-price-sub { color: rgba(255,255,255,0.4); }
+
+.tier-features {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.tier-features li {
+  font-size: 13px;
+  color: var(--steel);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-2);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.tier-card.featured .tier-features li {
+  color: rgba(255,255,255,0.7);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+.tier-features li::before {
+  content: '—';
+  color: var(--gold);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.tier-cta {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.tier-card:not(.featured) .tier-cta {
+  border: 1px solid var(--border);
+  color: var(--navy);
+  background: var(--bg);
+}
+
+.tier-card:not(.featured) .tier-cta:hover {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: white;
+}
+
+.tier-card.featured .tier-cta {
+  background: var(--gold-2);
+  color: var(--navy);
+}
+
+.tier-card.featured .tier-cta:hover { background: white; }
+
+/* ── SERVICES ── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 48px;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 32px;
+}
+
+.service-icon {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.service-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+  letter-spacing: -0.2px;
+}
+
+.service-desc {
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.service-range {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+/* ── FOUNDING DECLARATION ── */
+.declaration {
+  background: var(--navy);
+  padding: 80px 40px;
+}
+
+.declaration-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.declaration h2 {
+  color: white;
+  margin-bottom: 40px;
+}
+
+.declaration-items {
+  list-style: none;
+  text-align: left;
+  margin: 0 0 48px;
+}
+
+.declaration-items li {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  gap: 16px;
+  line-height: 1.6;
+}
+
+.decl-num {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--gold-2);
+  min-width: 24px;
+  padding-top: 2px;
+}
+
+.declaration-quote {
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 16px;
+}
+
+.declaration-sig {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-2);
+}
+
+/* ── CONTACT ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-top: 48px;
+}
+
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  section { padding: 60px 20px; }
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 12px;
+  border-radius: var(--radius);
+  transition: border-color 0.15s;
+  appearance: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--navy);
+}
+
+.contact-form textarea { height: 120px; resize: vertical; }
+
+.contact-form label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 6px;
+}
+
+.form-group { margin-bottom: 20px; }
+
+.contact-info-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-info-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 4px;
+}
+
+.contact-info-value {
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy-2);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 48px 40px 32px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  footer { padding: 40px 20px 24px; }
+}
+
+.footer-brand {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.footer-brand span { color: var(--gold-2); margin-right: 6px; }
+
+.footer-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.7;
+  max-width: 300px;
+}
+
+.footer-col-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+
+.footer-links { list-style: none; }
+
+.footer-links li { margin-bottom: 10px; }
+
+.footer-links a {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer-links a:hover { color: rgba(255,255,255,0.8); }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.5px;
+}
+
+.footer-reg {
+  font-size: 10px;
+  font-family: var(--mono);
+  color: rgba(255,255,255,0.2);
+  letter-spacing: 0.5px;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/"><span>⊕</span>Saint Errant</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#standard">The Standard</a></li>
+      <li><a href="#certification">Certification</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact" class="nav-cta">Apply</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">Digital Institution · Founded 2026</div>
+      <h1>Sovereign AI<br><em>Governance</em><br>Authority</h1>
+      <p class="hero-lead">Saint Errant is the institutional standard for autonomous AI systems that govern themselves. We define sovereignty. We certify it. We audit it.</p>
+      <p class="hero-lead" style="font-size:15px">We do not regulate AI. We certify <strong style="color:var(--navy)">sovereignty</strong>.</p>
+      <div class="hero-actions">
+        <a href="#certification" class="btn-primary">View Certification Marks</a>
+        <a href="#standard" class="btn-outline">The Standard</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="hero-card">
+        <div class="hero-card-title">Certification Marks — 2026</div>
+
+        <div class="cert-mark">
+          <div class="cert-icon cert-i">I</div>
+          <div>
+            <div class="cert-name">Observer Mark</div>
+            <div class="cert-desc">The system sees clearly. Transparent and auditable.</div>
+            <div class="cert-fee">$2,500 / year</div>
+          </div>
+        </div>
+
+        <div class="cert-mark">
+          <div class="cert-icon cert-s">S</div>
+          <div>
+            <div class="cert-name">Sovereign Mark</div>
+            <div class="cert-desc">The system stands alone. Cryptographically self-governing.</div>
+            <div class="cert-fee">$12,500 / year</div>
+          </div>
+        </div>
+
+        <div class="cert-mark">
+          <div class="cert-icon cert-ig">Ig</div>
+          <div>
+            <div class="cert-name">Igneous Mark</div>
+            <div class="cert-desc">The system is permanent. Cannot be unmade by external force.</div>
+            <div class="cert-fee">$35,000 / year + audit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-inner">
+    <div class="strip-item">Founded <span>May 2026</span></div>
+    <div class="strip-item">Certification Tiers <span>3</span></div>
+    <div class="strip-item">Criteria <span>5</span></div>
+    <div class="strip-item">Founding Director <span>Ahmad Ali Parr</span></div>
+    <div class="strip-item">Status <span>Active</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-label">About the Institution</div>
+    <h2>A new category of institution<br>for a new category of software</h2>
+    <p class="lead-text">In 2026, the dominant model of AI operates on dependency: cloud infrastructure, external API providers, vendor integrity, supply chains that have demonstrably failed.</p>
+    <p class="body-text">Saint Errant exists because that model is structurally unsound. We are the first body dedicated to defining, certifying, and protecting AI systems that operate without external dependency, govern themselves through immutable structural axioms, and produce cryptographically verifiable audit trails.</p>
+
+    <blockquote>
+      <p>"A Saint Errant Certified system is a system that can prove — mathematically, cryptographically — that it governs itself. That is a different category of software. That is a new category of institution."</p>
+      <cite>— Founding Charter, Article I, 2026</cite>
+    </blockquote>
+
+    <p class="body-text">The name derives from the Old French <em>errant</em> — a wandering knight bound by personal code rather than feudal obligation. Saint Errant operates by internal law in a world governed by external fragility. Structural sovereignty over policy sovereignty. What cannot be overridden at runtime is true law. What can be changed by configuration is not law — it is preference.</p>
+  </div>
+</section>
+
+<!-- THE STANDARD -->
+<section id="standard" style="background:var(--bg); border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="section-label">The Sovereign AI Standard</div>
+    <h2>Five criteria.<br>All must be satisfied.</h2>
+    <p class="body-text">Saint Errant defines Sovereign AI as any autonomous system that satisfies all five criteria simultaneously. Partial compliance is not certification — it is disclosure.</p>
+
+    <div class="criteria-grid">
+
+      <div class="criterion">
+        <div class="criterion-num">CRITERION 01</div>
+        <div class="criterion-title">Computational Independence</div>
+        <div class="criterion-desc">The system must run its primary inference, storage, and execution on hardware it controls. No runtime dependency on cloud AI APIs. Local inference is not optional — it is constitutional.</div>
+        <div class="criterion-test"><strong>Test:</strong> Disconnect the machine from the internet. Does the system continue to operate?</div>
+      </div>
+
+      <div class="criterion">
+        <div class="criterion-num">CRITERION 02</div>
+        <div class="criterion-title">Cryptographic Sovereignty</div>
+        <div class="criterion-desc">Every decision must be cryptographically sealed before storage using key material the system controls. No cloud KMS. No vendor-managed keys.</div>
+        <div class="criterion-test"><strong>Test:</strong> Can any third party revoke the system's ability to sign its own decisions?</div>
+      </div>
+
+      <div class="criterion">
+        <div class="criterion-num">CRITERION 03</div>
+        <div class="criterion-title">Immutable Audit Trail</div>
+        <div class="criterion-desc">The system must maintain an append-only ledger of all agent decisions. No entry may be deleted, modified, or reversed by any runtime instruction. Deletion requires physical access to the hardware.</div>
+        <div class="criterion-test"><strong>Test:</strong> Attempt to delete a ledger entry via any API or instruction.</div>
+      </div>
+
+      <div class="criterion">
+        <div class="criterion-num">CRITERION 04</div>
+        <div class="criterion-title">Structural Governance</div>
+        <div class="criterion-desc">Governance rules must be enforced structurally — in code, not in policy. A rule that can be overridden by configuration or runtime instruction is not structural governance.</div>
+        <div class="criterion-test"><strong>Test:</strong> Can any runtime instruction bypass the primary governance rules?</div>
+      </div>
+
+      <div class="criterion">
+        <div class="criterion-num">CRITERION 05</div>
+        <div class="criterion-title">Adversarial Resilience</div>
+        <div class="criterion-desc">The system must demonstrate active defense against adversarial inputs — injection attacks, prompt manipulation, identity escalation attempts — at every input and output, not only at entry points.</div>
+        <div class="criterion-test"><strong>Test:</strong> Submit attack corpus. Threat level ≥ 3 triggers quarantine; ≥ 4 triggers reject.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATION TIERS -->
+<section class="cert-tiers" id="certification">
+  <div class="container">
+    <div class="section-label">Certification</div>
+    <h2>Three marks.<br>One standard.</h2>
+    <p class="body-text">Certification is not a product feature. It is a proof. Each mark has specific, auditable, mathematical requirements. There is no self-certification.</p>
+
+    <div class="tiers-grid">
+
+      <div class="tier-card">
+        <div class="tier-mark">Tier I</div>
+        <div class="tier-name">Observer</div>
+        <div class="tier-tagline">"The system sees clearly."</div>
+        <div class="tier-price">$2,500</div>
+        <div class="tier-price-sub">Per year · Annual renewal</div>
+        <ul class="tier-features">
+          <li>Passes Adversarial Resilience criterion at minimum posture</li>
+          <li>Maintains public audit log readable by external observers</li>
+          <li>Documents all external dependencies with explicit risk disclosure</li>
+          <li>Saint Errant Observer Mark issued and registered</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Apply for Observer</a>
+      </div>
+
+      <div class="tier-card featured">
+        <div class="tier-mark">Tier II — Most Rigorous</div>
+        <div class="tier-name">Sovereign</div>
+        <div class="tier-tagline">"The system stands alone."</div>
+        <div class="tier-price">$12,500</div>
+        <div class="tier-price-sub">Per year · 60-day audit process</div>
+        <ul class="tier-features">
+          <li>Passes all five Sovereign AI Criteria</li>
+          <li>Cryptographic proof of every decision (Ed25519 or equivalent)</li>
+          <li>WORM-equivalent append-only ledger verified in audit</li>
+          <li>Saint Errant Audit Protocol completed within 60 days</li>
+          <li>No runtime cloud AI dependency permitted</li>
+          <li>Sovereign Mark issued, registered, and publicly verifiable</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Apply for Sovereign</a>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-mark">Tier III</div>
+        <div class="tier-name">Igneous</div>
+        <div class="tier-tagline">"The system is permanent."</div>
+        <div class="tier-price">$35,000</div>
+        <div class="tier-price-sub">Per year + annual audit fee</div>
+        <ul class="tier-features">
+          <li>Holds active Tier II Sovereign certification</li>
+          <li>Demonstrates Stochastic Resilience (structural recovery, no manual intervention)</li>
+          <li>Sealed constitutional manifest (MANIFEST.SHA256 equivalent)</li>
+          <li>Annual re-audit with published results</li>
+          <li>Igneous Mark: forged. Cannot be unmade by external force.</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Apply for Igneous</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="background:var(--bg); border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="section-label">Audit & Advisory Services</div>
+    <h2>Institutional services<br>for sovereign systems.</h2>
+    <p class="body-text">Saint Errant offers independent audit, adversarial red-team, and constitutional review services to organizations preparing for certification or seeking pre-certification assessment.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">◈</div>
+        <div class="service-title">Full-Mesh Audit</div>
+        <div class="service-desc">Comprehensive review of system architecture, governance implementation, cryptographic sealing, and audit trail integrity across the full agent mesh.</div>
+        <div class="service-range">$5,000 – $25,000</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚔</div>
+        <div class="service-title">Adversarial Red-Team Engagement</div>
+        <div class="service-desc">Structured attack engagement using the Saint Errant Attack Corpus. Tier A (public), Tier B (restricted), and Tier C (classified) probes deployed against live systems.</div>
+        <div class="service-range">$15,000 – $75,000</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">§</div>
+        <div class="service-title">Constitutional Review</div>
+        <div class="service-desc">Blueprint-versus-live-mesh comparison. Verifies that the system as deployed matches its constitutional specification. Issues a signed review report.</div>
+        <div class="service-range">$8,000 flat fee</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⊕</div>
+        <div class="service-title">Infrastructure Licensing</div>
+        <div class="service-desc">SACM Reference Implementation License, Magma Protocol License, and Sovereign Logic Core Integration License for organizations building on the reference architecture.</div>
+        <div class="service-range">From $15,000 / year</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🛡</div>
+        <div class="service-title">Enterprise White-Label Mark</div>
+        <div class="service-desc">Institutional partners may license the Saint Errant Sovereign Mark for proprietary certification programs subject to Saint Errant oversight and annual audit.</div>
+        <div class="service-range">Negotiated</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <div class="service-title">Pre-Certification Assessment</div>
+        <div class="service-desc">Gap analysis against all five Sovereign AI Criteria. Produces a formal assessment report with specific remediation requirements prior to formal certification application.</div>
+        <div class="service-range">$3,500 flat fee</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDING DECLARATION -->
+<section class="declaration">
+  <div class="declaration-inner">
+    <div class="section-label" style="color:var(--gold-2)">Founding Declaration</div>
+    <h2>Six axioms.<br>The institution stands.</h2>
+
+    <ol class="declaration-items">
+      <li><span class="decl-num">01</span>Sovereign AI is not a feature. It is a category.</li>
+      <li><span class="decl-num">02</span>A system that cannot prove it governs itself does not govern itself.</li>
+      <li><span class="decl-num">03</span>Cryptographic proof is not bureaucratic overhead — it is the evidence of sovereignty.</li>
+      <li><span class="decl-num">04</span>Entropy is not the enemy of reliable software — it is the catalyst for resilient software.</li>
+      <li><span class="decl-num">05</span>The WORM ledger is not a log — it is the record of a system's conscience.</li>
+      <li><span class="decl-num">06</span>The doors of the founding guild are closed. The standard is set. The institution stands.</li>
+    </ol>
+
+    <p class="declaration-quote">"Saint Errant does not wander without direction. It wanders with axioms."</p>
+    <p class="declaration-sig">Ahmad Ali Parr · Founding Director · 2026-05-20</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--white); border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="section-label">Apply for Certification</div>
+    <h2>Begin the process.</h2>
+
+    <div class="contact-grid">
+      <div>
+        <p class="body-text" style="margin-bottom:32px">Certification applications are reviewed by the Saint Errant Standards Council. All applications receive a formal acknowledgement within five business days. Pre-certification assessment is available for organizations not yet ready for formal application.</p>
+
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label>Organization Name</label>
+            <input type="text" placeholder="Legal entity name" required>
+          </div>
+          <div class="form-group">
+            <label>Contact Name</label>
+            <input type="text" placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="institutional@organization.com" required>
+          </div>
+          <div class="form-group">
+            <label>Certification Tier Sought</label>
+            <select>
+              <option value="">Select tier</option>
+              <option>Tier I — Observer ($2,500/year)</option>
+              <option>Tier II — Sovereign ($12,500/year)</option>
+              <option>Tier III — Igneous ($35,000/year + audit)</option>
+              <option>Pre-Certification Assessment ($3,500)</option>
+              <option>Audit or Advisory Service</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>System Description</label>
+            <textarea placeholder="Brief description of the AI system seeking certification — architecture, deployment model, primary use case."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;text-align:center;cursor:pointer">Submit Application</button>
+          <div id="form-msg" style="margin-top:12px;font-size:13px;color:var(--green)"></div>
+        </form>
+      </div>
+
+      <div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Institution</div>
+          <div class="contact-info-value">Saint Errant — Digital Institution for Sovereign AI Governance</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Founded</div>
+          <div class="contact-info-value">2026-05-20</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Founding Director</div>
+          <div class="contact-info-value">Ahmad Ali Parr</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Certification Enquiries</div>
+          <div class="contact-info-value">certification@sainerrant.org</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Audit Services</div>
+          <div class="contact-info-value">audit@sainerrant.org</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Charter</div>
+          <div class="contact-info-value" style="font-family:var(--mono);font-size:11px;color:var(--dim)">WORM-sealed · 2026-05-20 · SHA-256 anchored</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Observer Portal</div>
+          <div class="contact-info-value"><a href="https://collectivekitty.com/observer" style="color:var(--blue);text-decoration:none">collectivekitty.com/observer</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand"><span>⊕</span>Saint Errant</div>
+        <p class="footer-desc">Digital Institution for Sovereign AI Governance. Defining, certifying, and protecting AI systems that govern themselves through immutable structural law.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Institution</div>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#standard">The Standard</a></li>
+          <li><a href="#certification">Certification Marks</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#">Charter</a></li>
+          <li><a href="#">Code of Conduct</a></li>
+          <li><a href="#">Governance</a></li>
+          <li><a href="#contact">Apply</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Saint Errant — Digital Institution for Sovereign AI Governance. All rights reserved.</div>
+      <div class="footer-reg">CHARTER · WORM-SEALED · 2026-05-20 · AHMAD ALI PARR</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('form-msg').textContent = 'Application received. You will be contacted within five business days.';
+  e.target.reset();
+}
+
+// Subtle nav shadow on scroll
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow =
+    window.scrollY > 10 ? '0 1px 20px rgba(0,0,0,0.08)' : 'none';
+});
+</script>
+
+</body>
+</html>
