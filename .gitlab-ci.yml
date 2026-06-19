@@ -3,7 +3,8 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-    - cp -r public/* public/ 2>/dev/null || true
+    - echo "Saint Errant - deploying to GitLab Pages"
+    - echo "Pages URL https://ahmad-parr-dev1-group.gitlab.io/saint-errant"
   artifacts:
     paths:
       - public
