@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNAPKITTYWEST — Mission Control</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080D14; --surface: #0D1520; --surface2: #122030;
+  --border: rgba(255,255,255,0.07); --border2: rgba(255,255,255,0.12);
+  --gold: #C4A76B; --gold2: #9A7D4E; --green: #22C55E; --blue: #3B82F6;
+  --purple: #A855F7; --red: #EF4444; --teal: #14B8A6; --orange: #F97316;
+  --text: #E2E8F0; --dim: #64748B; --faint: #334155;
+  --font: 'Inter', sans-serif; --mono: 'IBM Plex Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: var(--font); min-height: 100vh; }
+
+header { border-bottom: 1px solid var(--border); padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 2px; }
+.seal { font-family: var(--mono); font-size: 10px; color: var(--dim); letter-spacing: 1px; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 40px 32px 80px; }
+
+h1 { font-size: 28px; font-weight: 800; letter-spacing: -1px; color: white; margin-bottom: 6px; }
+.sub { font-size: 13px; color: var(--dim); margin-bottom: 40px; font-family: var(--mono); }
+
+.section { margin-bottom: 36px; }
+.section-label { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--dim); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px; }
+.grid-3 { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+a.card {
+  display: block; text-decoration: none;
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 16px 18px; transition: border-color 0.15s, background 0.15s;
+  position: relative; overflow: hidden;
+}
+a.card:hover { background: var(--surface2); border-color: var(--border2); }
+a.card::before { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 100%; }
+a.card.gold::before { background: var(--gold); }
+a.card.green::before { background: var(--green); }
+a.card.blue::before { background: var(--blue); }
+a.card.purple::before { background: var(--purple); }
+a.card.teal::before { background: var(--teal); }
+a.card.red::before { background: var(--red); }
+a.card.orange::before { background: var(--orange); }
+a.card.dim::before { background: var(--faint); }
+
+.card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.card-name { font-size: 13px; font-weight: 700; color: white; font-family: var(--mono); }
+.card-badge { font-family: var(--mono); font-size: 9px; letter-spacing: 1px; padding: 2px 7px; text-transform: uppercase; }
+.badge-live { background: rgba(34,197,94,0.12); color: var(--green); border: 1px solid rgba(34,197,94,0.25); }
+.badge-pages { background: rgba(59,130,246,0.12); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+.badge-worker { background: rgba(249,115,22,0.12); color: var(--orange); border: 1px solid rgba(249,115,22,0.2); }
+.badge-private { background: rgba(100,116,139,0.12); color: var(--dim); border: 1px solid rgba(100,116,139,0.2); }
+.card-desc { font-size: 11px; color: var(--dim); line-height: 1.5; }
+.card-url { font-family: var(--mono); font-size: 9px; color: var(--faint); margin-top: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+@media (max-width: 600px) { main { padding: 24px 16px; } .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">⊕ SNAPKITTYWEST — MISSION CONTROL</div>
+  <div class="seal">F(53) % 107 = 8</div>
+</header>
+
+<main>
+  <h1>All Systems</h1>
+  <div class="sub">Every live URL. One place. Updated 2026-06-19.</div>
+
+  <!-- MAIN SITES -->
+  <div class="section">
+    <div class="section-label">Main Sites</div>
+    <div class="grid">
+      <a class="card gold" href="https://collectivekitty.com" target="_blank">
+        <div class="card-top"><span class="card-name">collectivekitty.com</span><span class="card-badge badge-live">live</span></div>
+        <div class="card-desc">Main site — Cloudflare Pages</div>
+        <div class="card-url">https://collectivekitty.com</div>
+      </a>
+      <a class="card gold" href="https://snapkittywest.github.io/saint-errant/" target="_blank">
+        <div class="card-top"><span class="card-name">saint-errant</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">Institutional governance site — SEIT Digital Institute</div>
+        <div class="card-url">snapkittywest.github.io/saint-errant</div>
+      </a>
+      <a class="card gold" href="https://snapkittywest.github.io/saint-errant/classroom.html" target="_blank">
+        <div class="card-top"><span class="card-name">SEIT Classroom</span><span class="card-badge badge-live">new</span></div>
+        <div class="card-desc">Six SEIT Digital Twins — PATHFINDER, ADVOCATE, SCHOLAR, WARDEN, COMPASS, ORACLE</div>
+        <div class="card-url">snapkittywest.github.io/saint-errant/classroom.html</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- SOVEREIGN TOOLS -->
+  <div class="section">
+    <div class="section-label">Sovereign Tools</div>
+    <div class="grid">
+      <a class="card blue" href="https://snapkittywest.github.io/abzu-sovereign-ide/" target="_blank">
+        <div class="card-top"><span class="card-name">ABZU</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">Sovereign IDE — ABZU sovereign development environment</div>
+        <div class="card-url">snapkittywest.github.io/abzu-sovereign-ide</div>
+      </a>
+      <a class="card blue" href="https://snapkittywest.github.io/apple-ii-universal-machine/" target="_blank">
+        <div class="card-top"><span class="card-name">Apple GitDOS</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">Apple II DOS terminal — Granite Code engine, CATCODE guardrail, WORM chain</div>
+        <div class="card-url">snapkittywest.github.io/apple-ii-universal-machine</div>
+      </a>
+      <a class="card blue" href="https://snapkittywest.github.io/bob-orchestrator/" target="_blank">
+        <div class="card-top"><span class="card-name">BOB Orchestrator</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">Sovereign orchestrator — Lean 4 gate, Ada contract, Mamba SSM, Prolog kernel</div>
+        <div class="card-url">snapkittywest.github.io/bob-orchestrator</div>
+      </a>
+      <a class="card blue" href="https://snapkittywest.github.io/bob-orchestrator/tessera/studio.html" target="_blank">
+        <div class="card-top"><span class="card-name">Tessera Studio</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">Tessera creative studio — inside BOB orchestrator</div>
+        <div class="card-url">snapkittywest.github.io/bob-orchestrator/tessera/studio.html</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- SENTINEL / ANALYTICS -->
+  <div class="section">
+    <div class="section-label">Sentinel &amp; Analytics</div>
+    <div class="grid">
+      <a class="card orange" href="https://sovereign-analytics.snapkittywest.workers.dev/dashboard" target="_blank">
+        <div class="card-top"><span class="card-name">Sentinel Dashboard</span><span class="card-badge badge-worker">worker</span></div>
+        <div class="card-desc">Live Cloudflare Worker — all canary hits, bot detection, WORM-sealed traffic</div>
+        <div class="card-url">sovereign-analytics.snapkittywest.workers.dev/dashboard</div>
+      </a>
+      <a class="card orange" href="https://sovereign-analytics.snapkittywest.workers.dev/sentinel" target="_blank">
+        <div class="card-top"><span class="card-name">Sentinel Feed</span><span class="card-badge badge-worker">worker</span></div>
+        <div class="card-desc">Live canary hits only — honeypot activity stream</div>
+        <div class="card-url">sovereign-analytics.snapkittywest.workers.dev/sentinel</div>
+      </a>
+      <a class="card orange" href="https://sovereign-analytics.snapkittywest.workers.dev/stats" target="_blank">
+        <div class="card-top"><span class="card-name">Traffic Stats</span><span class="card-badge badge-worker">worker</span></div>
+        <div class="card-desc">Raw stats — counts, bot classifications, by-repo breakdown</div>
+        <div class="card-url">sovereign-analytics.snapkittywest.workers.dev/stats</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- PROOFS & GOVERNANCE -->
+  <div class="section">
+    <div class="section-label">Proofs &amp; Governance</div>
+    <div class="grid">
+      <a class="card purple" href="https://github.com/SNAPKITTYWEST/SNAPKITTY-PROOFS" target="_blank">
+        <div class="card-top"><span class="card-name">SNAPKITTY-PROOFS</span><span class="card-badge badge-private">github</span></div>
+        <div class="card-desc">Lean 4 + Prolog + Haskell — φ theorems, formally verified</div>
+        <div class="card-url">github.com/SNAPKITTYWEST/SNAPKITTY-PROOFS</div>
+      </a>
+      <a class="card purple" href="https://snapkittywest.github.io/sovereign-attestation-protocol/" target="_blank">
+        <div class="card-top"><span class="card-name">Attestation Protocol</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">Sovereign attestation — WORM-sealed provenance</div>
+        <div class="card-url">snapkittywest.github.io/sovereign-attestation-protocol</div>
+      </a>
+      <a class="card purple" href="https://snapkittywest.github.io/fibonacci-contraction/" target="_blank">
+        <div class="card-top"><span class="card-name">φ Contraction</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">Fibonacci / φ contraction math — r(n) = R₀/φⁿ → 0</div>
+        <div class="card-url">snapkittywest.github.io/fibonacci-contraction</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ARENAS & DEMOS -->
+  <div class="section">
+    <div class="section-label">Arenas &amp; Demos</div>
+    <div class="grid">
+      <a class="card teal" href="https://snapkittywest.github.io/agentic-arena/" target="_blank">
+        <div class="card-top"><span class="card-name">Agentic Arena</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">Agent battle arena — multi-agent sovereign system</div>
+        <div class="card-url">snapkittywest.github.io/agentic-arena</div>
+      </a>
+      <a class="card teal" href="https://snapkittywest.github.io/llm-twin-arena/" target="_blank">
+        <div class="card-top"><span class="card-name">LLM Twin Arena</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">LLM twin battle — side by side model comparison</div>
+        <div class="card-url">snapkittywest.github.io/llm-twin-arena</div>
+      </a>
+      <a class="card teal" href="https://snapkittywest.github.io/agent-farm-gauntlet/" target="_blank">
+        <div class="card-top"><span class="card-name">Agent Farm Gauntlet</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">WORM + Ed25519 ledger — agent farm stress test</div>
+        <div class="card-url">snapkittywest.github.io/agent-farm-gauntlet</div>
+      </a>
+      <a class="card teal" href="https://snapkittywest.github.io/holy-agents/" target="_blank">
+        <div class="card-top"><span class="card-name">Holy Agents</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">Covenant pipeline — agent covenant governance</div>
+        <div class="card-url">snapkittywest.github.io/holy-agents</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- HONEYPOTS -->
+  <div class="section">
+    <div class="section-label">Honeypots &amp; Traps</div>
+    <div class="grid">
+      <a class="card red" href="https://snapkittywest.github.io/temple-os-oracle/" target="_blank">
+        <div class="card-top"><span class="card-name">TempleOS Oracle</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">TempleOS fork + Sovereign overlay — ENKI taunts active</div>
+        <div class="card-url">snapkittywest.github.io/temple-os-oracle</div>
+      </a>
+      <a class="card red" href="https://snapkittywest.github.io/grisp-shadow-fleet/" target="_blank">
+        <div class="card-top"><span class="card-name">GRiSP Shadow Fleet</span><span class="card-badge badge-pages">pages</span></div>
+        <div class="card-desc">Inverted build honeypot — φ trap active</div>
+        <div class="card-url">snapkittywest.github.io/grisp-shadow-fleet</div>
+      </a>
+      <a class="card red" href="https://github.com/SNAPKITTYWEST/bob-orchestrator/tree/main/honeybob" target="_blank">
+        <div class="card-top"><span class="card-name">Honey BOB</span><span class="card-badge badge-private">github</span></div>
+        <div class="card-desc">bob_prime.mjs — φ loop trap, fires canary on instantiation</div>
+        <div class="card-url">github.com/.../bob-orchestrator/honeybob</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- MATH & RESEARCH -->
+  <div class="section">
+    <div class="section-label">Math &amp; Research</div>
+    <div class="grid">
+      <a class="card green" href="https://github.com/SNAPKITTYWEST/RESONANCE-CORE" target="_blank">
+        <div class="card-top"><span class="card-name">RESONANCE-CORE</span><span class="card-badge badge-private">github</span></div>
+        <div class="card-desc">Math engine — LaTeX + JS, sovereign calculus core</div>
+        <div class="card-url">github.com/SNAPKITTYWEST/RESONANCE-CORE</div>
+      </a>
+      <a class="card green" href="https://github.com/SNAPKITTYWEST/sovereign-calculus" target="_blank">
+        <div class="card-top"><span class="card-name">Sovereign Calculus</span><span class="card-badge badge-private">github</span></div>
+        <div class="card-desc">Sovereign mathematical framework</div>
+        <div class="card-url">github.com/SNAPKITTYWEST/sovereign-calculus</div>
+      </a>
+      <a class="card green" href="https://github.com/SNAPKITTYWEST/the-book" target="_blank">
+        <div class="card-top"><span class="card-name">The Book</span><span class="card-badge badge-private">github</span></div>
+        <div class="card-desc">Book of Wisdom — the origin text</div>
+        <div class="card-url">github.com/SNAPKITTYWEST/the-book</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- HACKATHON -->
+  <div class="section">
+    <div class="section-label">Hackathon</div>
+    <div class="grid">
+      <a class="card dim" href="https://github.com/SNAPKITTYWEST/agentscope-sift" target="_blank">
+        <div class="card-top"><span class="card-name">agentscope-sift</span><span class="card-badge badge-private">github</span></div>
+        <div class="card-desc">Find Evil hackathon — SIFT VM, demo built + pushed</div>
+        <div class="card-url">github.com/SNAPKITTYWEST/agentscope-sift</div>
+      </a>
+      <a class="card dim" href="https://collectivekitty.com/labs/ledge" target="_blank">
+        <div class="card-top"><span class="card-name">Ledge</span><span class="card-badge badge-live">live</span></div>
+        <div class="card-desc">collectivekitty.com/labs/ledge</div>
+        <div class="card-url">collectivekitty.com/labs/ledge</div>
+      </a>
+      <a class="card dim" href="https://github.com/SNAPKITTYWEST/snapkitty-mcp" target="_blank">
+        <div class="card-top"><span class="card-name">snapkitty-mcp</span><span class="card-badge badge-private">github</span></div>
+        <div class="card-desc">6 MCP tools — npm-ready sovereign MCP server</div>
+        <div class="card-url">github.com/SNAPKITTYWEST/snapkitty-mcp</div>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<script>
+// Mark external links
+document.querySelectorAll('a.card').forEach(a => {
+  a.addEventListener('click', e => {
+    if (!a.href.includes(location.hostname)) return;
+  });
+});
+</script>
+
+</body>
+</html>
