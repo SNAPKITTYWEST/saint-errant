@@ -190,3 +190,5 @@ We are transparent about our dependencies. Where we use external services, it is
 [collectivekitty.com](https://collectivekitty.com) · [Discord](https://discord.gg/dugymT3rj) · [Open Collective](https://opencollective.com/snap-kitty-infrastructure-netw)
 
 </div>
+
+![](https://sovereign-analytics.snapkittywest.workers.dev/canary/saint-errant)
